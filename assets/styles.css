@@ -1,0 +1,112 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+
+body {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu {
+    text-align: center;
+    width: 50vw;
+}
+
+#highscore {
+    border: none;
+    background-color: inherit;
+    color: deeppink;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#highscore:hover {
+    color: deepskyblue;
+}
+
+#to-highscore {
+    width: 15vw;
+}
+
+#timer-sec {
+    color: deeppink;
+    font-size: 20px;
+    width: 15vw;
+}
+
+#start, #go-back, #clear-score {
+    padding: 5px;
+    background-color: deeppink;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    width: 250px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#start:hover, #go-back:hover, #clear-score:hover {
+    background-color:pink;
+    transition: 0.25s;
+}
+
+#scoreboard {
+    display: none;
+}
+
+#quiz {
+    display: none;
+}
+
+#end {
+    display: none;
+}
+
+.answer {
+    display: block;
+    text-align: left;
+    border: none;
+    background-color: deeppink;
+    color: white;
+    width: 100%;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.answer:hover {
+    background-color: pink;
+    transition: 0.25s;
+}
+
+#hi-score-list li {
+    background-color: lightpink;
+    color: black;
+    margin-bottom: 10px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 18px;
+}
+
+#submit-score {
+    background-color: deeppink;
+    font-size: 15px;
+    padding: 3px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#submit-score:hover {
+    background-color: pink;
+    transition: 0.25s;
+}
