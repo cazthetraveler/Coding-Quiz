@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Javascript Coding Quiz</title>
 </head>
+
+<!--https://wireframe.cc/Uy5mnn  wireframe for site-->
+
 <body>
+
+    <!--HIGHSCORE BUTTON-->
+    <aside id="to-highscore">
+        <button id="highscore">View Highscores</button>
+    </aside>
+
+    <!--MAIN MENU-->
+    <main id="menu">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Answer the questions and aim for a high score!</p>
+        <button id="start">Start Quiz</button>
+    </main>
+
+    <!--HIGHSCORE MENU-->
+    <section id="scoreboard">
+        <h2>Highscores</h2>
+        <p>Here are the highscores!</p>
+        <ol id="hi-score-list"></ol>
+        <button id="go-back">GO BACK</button>
+        <button id="clear-score">CLEAR SCORES</button>
+    </section>
+
+    <!--QUIZ MENU-->
+    <section id="quiz">
+        <h2 id="question">Question:</h2>
+        <button class="answer" id="a"></button>
+        <button class="answer" id="b"></button>
+        <button class="answer" id="c"></button>
+        <button class="answer" id="d"></button>
+    </section>
+
+    <!--END MENU-->
+    <section id="end">
+        <h2>All done!</h2>
+        <p id="score-display"></p>
+
+        <form>
+            <label for="name">Enter your initials: </label>
+            <input id="name" type="text" placeholder="ABC..." maxlength="3">
+            <button id="submit-score">SUBMIT</button>
+        </form>
+    </section>
+
+    <!--TIMER-->
+    <section id="timer-sec">
+        <p id="timer">Timer: 0</p>
+    </section>
     
 </body>
 </html>
