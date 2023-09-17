@@ -11,7 +11,7 @@ var clearButton = document.querySelector("#clear-score");
 var startButton = document.querySelector("#start");
 var submitButton = document.querySelector("#submit-score");
 
-//TIMER
+//QUIZ TIMER
 var timer = document.querySelector("#timer");
 var timeLeft = 60;
 var timeInterval;
@@ -25,6 +25,21 @@ var setTime = function() {
             clearInterval(timeInterval);
          };
     }, 1000);
+};
+
+
+//ANSWER PROMPT TIMER
+var answerTime = 3;
+var promptTime;
+
+var promptTime = function() {
+    promptInterval = setInterval(function() {
+        answerTime--;
+        if (answerTime == 0) {
+            answerPrompt.textContent = "";
+            clearInterval(promptInterval);
+         };
+    }, 500);
 };
 
 //LOCAL STORAGE
@@ -46,12 +61,15 @@ var choiceD = document.querySelector("#d");
 
 var questionIndex = 0;
 
+var answerPrompt = document.querySelector("#answer-prompt");
+
 //BUTTON FUNCTIONS
 
 // show scoreboard menu
 viewScoreButton.addEventListener("click", function() {
     mainMenu.setAttribute("style", "display: none;");
     quizMenu.setAttribute("style", "display: none;");
+    endMenu.setAttribute("style", "display: none;");
     scoreMenu.setAttribute("style", "display: block;");
     clearInterval(timeInterval);
 });
@@ -66,6 +84,7 @@ backButton.addEventListener("click", function() {
 clearButton.addEventListener("click", function(event) {
     event.preventDefault();
     localStorage.clear();
+    nameList = [];
     scoreList.innerHTML = ""; //clears list
 });
 
@@ -89,19 +108,17 @@ submitButton.addEventListener("click", function(event) {
 
 
     nameInput.value = ""; //clears the textbox for the name input
-    console.log(nameList);
 
     scoreList.innerHTML = ""; //okayy this clears the list and pretty much updates adding the namelist to the score list
 
-    // still not keeping the damn list when i refresh >:((
+    // still not keeping the list when i refresh >:((
+    // yeah idk why it's not keeping the score list when I go back onto the page
         
     for (var i = 0; i < nameList.length; i++) {
         var listItem = document.createElement("li");
         listItem.textContent = nameList[i];
         scoreList.appendChild(listItem);
     };
-
-    console.log(storeRecord);
 
 });
 
@@ -140,16 +157,26 @@ function choiceClick(choiceIndex) {
 
     if (currentQuestion.choices[choiceIndex] === currentQuestion.correct) {
         timeLeft += 10;
+        answerPrompt.setAttribute("style", "color: green;");
+        answerPrompt.textContent = "Correct!";
+        answerTime = 3;
+        promptTime();
         //display a message indicating that it's correct
         
     } else {
         timeLeft -= 5;
-        //display a message that you are wrONNNNG hahah
+        answerPrompt.setAttribute("style", "color: red;");
+        answerPrompt.textContent = "Wrong...";
+        answerTime = 3;
+        promptTime();
+        //display a message that you are wrONNNNG hahaha
     };
 
     questionIndex++;
     showQuestion();
 };
+
+
 
 choiceA.addEventListener("click", function() {
     choiceClick(0);

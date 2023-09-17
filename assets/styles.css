@@ -110,3 +110,11 @@ body {
     background-color: pink;
     transition: 0.25s;
 }
+
+#answer-prompt {
+    font-size: 20px;
+    color: gray;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
