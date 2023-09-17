@@ -161,7 +161,6 @@ function choiceClick(choiceIndex) {
         answerPrompt.textContent = "Correct!";
         answerTime = 3;
         promptTime();
-        //display a message indicating that it's correct
         
     } else {
         timeLeft -= 5;
@@ -169,9 +168,7 @@ function choiceClick(choiceIndex) {
         answerPrompt.textContent = "Wrong...";
         answerTime = 3;
         promptTime();
-        //display a message that you are wrONNNNG hahaha
     };
-
     questionIndex++;
     showQuestion();
 };
@@ -201,26 +198,62 @@ choiceD.addEventListener("click", function() {
 
 var questionList = [
     {
-        q: "Which animal is the cutest ever?",
-        choices: ["a. Doggos", "b. Mouses", "c. Rectangle", "d. Lizzrd"],
-        correct: "b. Mouses"
+        q: "1. Inside which HTML element do we put the Javascript?",
+        choices: ["a. <javascript>", "b. <js>", "c. <script>", "d. <src>"],
+        correct: "c. <script>"
     },
 
     {
-        q: "What would you do if when you okay so he said yes would go?",
-        choices: ["a. What...", "b. I daun't knaur...", "c. I would say god bless him and to continue on vocabulary", "d. end livestream"],
-        correct: "c. I would say god bless him and to continue on vocabulary"
+        q: "2. How do you add a comment inside a Javascript?",
+        choices: ["a. #Comment", "b. //Comment", "c. <!--Comment-->", "d. **Comment"],
+        correct: "b. //Comment"
     },
 
     {
-        q: "What is my favorite water type starter?",
-        choices: ["a. Totodile", "b. Piplup", "c. Mudkip", "d. All of the above"],
-        correct: "d. All of the above"
+        q: "3. What is the purpose of Javascript?",
+        choices: ["a. Defines the structure of the content", "b. Styles the content", "c. Adds interactivity to the content", "d. Nothing"],
+        correct: "c. Adds interactivity to the content"
     },
 
     {
-        q: "Who the frick is smart?",
-        choices: ["a. me :)", "b. stopppp", "c. ur mom", "d. idek"],
-        correct: "a. me :)"
-    }
+        q: "4. Which is the correct way to declare a variable?",
+        choices: ["a. variable = nameEl;", "b. var nameEl == value;", "c. var = nameEl;", "d. var nameEl = value;"],
+        correct: "d. var nameEl = value;"
+    },
+
+    {
+        q: "5. What does the stopPropagation() method do?",
+        choices: ["a. Prevents event bubbling", "b. Prevents the page from refreshing", "c. Remembers preferences when the user closes the window", "d. Turns an object into a string"],
+        correct: "a. Prevents event bubbling"
+    },
+
+    {
+        q: "6. What number do Array indexes start with?",
+        choices: ["a. 0", "b. 1", "c. x", "d. i"],
+        correct: "a. 0"
+    },
+
+    {
+        q: "7. Which of the following is NOT an assignment operator?",
+        choices: ["a. +", "b. -", "c. &", "d. *"],
+        correct: "c. &"
+    },
+
+    {
+        q: "8. What does DOM stand for?",
+        choices: ["a. Declarative Object Method", "b. Definitive Operation Method", "c. Donut Octopus Mango", "d. Document Object Model"],
+        correct: "d. Document Object Model"
+    },
+
+    {
+        q: "9. Which of the following is getting a handle on an HTML element with the class 'root'?",
+        choices: ["a. var rootEl = document.GetElementById('root')", "b. var rootEl = document.querySelector('.root')", "c. var rootEl = .root", "d. var rootEl = getElementByClass('root')"],
+        correct: "b. document.querySelector('.root')"
+    },
+
+    {
+        q: "10. Which of these is NOT a valid event listener value?",
+        choices: ["a. click", "b. keydown", "c. enter", "d. mouseover"],
+        correct: "c. enter"
+    },
 ];
