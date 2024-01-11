@@ -1,0 +1,240 @@
+:root {
+    --yellow: #FFF5E1;
+    --blue: #6495ED;
+    --darkblue: #6A5ACD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+    padding: 5rem;
+}
+li {
+    list-style-position: inside;
+}
+
+/* main menu */
+
+#main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    height: 75vh;
+    background-color: var(--yellow);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+#main-menu h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+#main-menu p {
+    font-size: 1.25rem;
+}
+
+#start-button {
+    margin-top: auto;
+    color: white;
+    background-color: var(--blue);
+    border: none;
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: .75rem;
+    cursor: pointer;
+}
+
+#start-button:hover {
+    background-color: var(--darkblue);
+    transition: 0.3s;
+}
+
+/* score menu */
+
+#hiscore-button, #goback-button {
+    margin-top: auto;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 10vw;
+    height: 3rem;
+    border-radius: .5rem;
+}
+
+#hiscore-button:hover, #goback-button:hover {
+    background-color: var(--darkblue);
+    transition: 0.3s;
+}
+
+#goback-button {
+    display: none;
+}
+
+#score-menu {
+    display: none;
+    width: 70vw;
+    height: 75vh;
+    padding: 1.5rem;
+    background-color: var(--yellow);
+    border-radius: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#score-menu h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#hiscore-list {
+    font-size: 1.5rem;
+    width: 40vw;
+}
+
+#hiscore-list li {
+    margin-bottom: .5rem;
+    background-color: white;
+    font-family: monospace;
+    padding: .5rem;
+    border-radius: .35rem;
+}
+
+#clear-button {
+    margin-top: auto;
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    background-color: red;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#clear-button:hover {
+    background-color: darkred;
+    transition: 0.3s;
+}
+
+/* quiz menu */
+
+#quiz-menu {
+    display: none;
+    width: 70vw;
+    height: 75vh;
+    padding: 1.5rem;
+    background-color: var(--yellow);
+    border-radius: 1rem;
+}
+
+#question {
+    margin-bottom: 3rem;
+}
+
+.answer {
+    display: block;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    background-color: var(--blue);
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.answer:hover {
+    background-color: var(--darkblue);
+    transition: 0.3s;
+}
+
+/* end menu */
+
+#end-menu {
+    display: none;
+
+    width: 70vw;
+    height: 75vh;
+    padding: 1.5rem;
+    background-color: var(--yellow);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+#end-menu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#score-display {
+    background-color: white;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#submit-score-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+    margin: auto;
+}
+
+#submit-score-form label {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#submit-score-form input {
+    padding: .25rem;
+    width: 15vw;
+    margin-bottom: 1rem;
+}
+
+#submit-score-form button {
+    background-color: var(--blue);
+    color: white;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+#submit-score-form button:hover {
+    background-color: var(--darkblue);
+    transition: .3s;
+}
+
+/* timer display */
+
+#timer-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--yellow);
+    border-radius: 1rem;
+    width: 10vw;
+    height: 10rem;
+    padding: 1.5rem;
+}
+
+#timer {
+    font-size: 2rem;
+    font-weight: bold;
+}

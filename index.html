@@ -3,38 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Coding Quiz</title>
-    <link rel="stylesheet" href="./assets/styles.css">
+    <title>Javascript Quiz</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
-<!--https://wireframe.cc/Uy5mnn  wireframe for site-->
-
 <body>
-
-    <!--HIGHSCORE BUTTON-->
-    <aside id="to-highscore">
-        <button id="highscore">View Highscores</button>
-    </aside>
-
-    <!--MAIN MENU-->
-    <main id="menu">
-        <h1>Coding Quiz Challenge</h1>
-        <p>Answer the questions and aim for a high score!</p>
-        <button id="start">Start Quiz</button>
-    </main>
-
-    <!--HIGHSCORE MENU-->
-    <section id="scoreboard">
-        <h2>Highscores</h2>
-        <p>Here are the highscores!</p>
-        <ol id="hi-score-list"></ol>
-        <button id="go-back">GO BACK</button>
-        <button id="clear-score">CLEAR SCORES</button>
+    <section id="main-menu">
+        <h1>Javascript Quiz</h1>
+        <p>Answer all the questions correctly before the timer and aim for the high score!</p>
+        <button type="button" id="start-button">START</button>
     </section>
 
-    <!--QUIZ MENU-->
-    <section id="quiz">
-        <h2 id="question">Question:</h2>
+    <section id="score-menu">
+        <h2>High Scores</h2>
+        <div class="list">
+            <ol id="hiscore-list"></ol>
+        </div>
+        <button type="button" id="clear-button">CLEAR SCORES</button>
+    </section>
+
+    <section id="quiz-menu">
+        <h2>Question:</h2>
+        <h2 id="question"></h2>
         <button class="answer" id="a"></button>
         <button class="answer" id="b"></button>
         <button class="answer" id="c"></button>
@@ -42,25 +32,24 @@
         <p id="answer-prompt"></p>
     </section>
 
-    <!--END MENU-->
-    <section id="end">
-        <h2>All done!</h2>
+    <section id="end-menu">
+        <h2>All done!!</h2>
         <p id="score-display"></p>
-
-        <form>
-            <label for="name">Enter your initials: </label>
-            <input id="name" type="text" placeholder="ABC..." maxlength="3">
-            <button id="submit-score">SUBMIT</button>
+        <form id="submit-score-form">
+            <label for="name-input">Enter your initials:</label>
+            <input id="name-input" type="text" maxlength="3">
+            <button type="submit" id="submit-score">SUBMIT</button>
         </form>
     </section>
 
-    <!--TIMER-->
-    <section id="timer-sec">
+    <section id="timer-display">
         <p id="timer">Timer: 0</p>
+        <button type="button" id="hiscore-button">VIEW HIGHSCORES</button>
+        <button type="button" id="goback-button">GO BACK</button>
     </section>
-    
 </body>
 
-<script src="./assets/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="./assets/js/script.js"></script>
 
 </html>
